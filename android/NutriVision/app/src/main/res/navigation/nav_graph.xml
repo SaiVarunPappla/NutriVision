@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.nutrivision.app.ui.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_scan"
+            app:destination="@id/nav_scan"
+            app:enterAnim="@anim/fade_slide_up"
+            app:exitAnim="@anim/gentle_fade_in" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_text_input"
+            app:destination="@id/nav_text_input"
+            app:enterAnim="@anim/fade_slide_up"
+            app:exitAnim="@anim/gentle_fade_in" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_chatbot"
+            app:destination="@id/nav_chatbot"
+            app:enterAnim="@anim/fade_slide_up"
+            app:exitAnim="@anim/gentle_fade_in" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_scan"
+        android:name="com.nutrivision.app.ui.scan.ImageScanFragment"
+        android:label="Scan">
+        <action
+            android:id="@+id/action_nav_scan_to_nav_result"
+            app:destination="@id/nav_result"
+            app:enterAnim="@anim/fade_slide_up"
+            app:exitAnim="@anim/gentle_fade_in" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_text_input"
+        android:name="com.nutrivision.app.ui.scan.TextInputFragment"
+        android:label="Type Ingredients">
+        <action
+            android:id="@+id/action_nav_text_input_to_nav_result"
+            app:destination="@id/nav_result"
+            app:enterAnim="@anim/fade_slide_up"
+            app:exitAnim="@anim/gentle_fade_in" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_result"
+        android:name="com.nutrivision.app.ui.result.ResultFragment"
+        android:label="Analysis Result">
+        <!-- Action to navigate back home -->
+        <action
+            android:id="@+id/action_nav_result_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+        <!-- Action to navigate to Chatbot Fragment -->
+        <action
+            android:id="@+id/action_nav_result_to_nav_chatbot"
+            app:destination="@id/nav_chatbot"
+            app:enterAnim="@anim/fade_slide_up"
+            app:exitAnim="@anim/gentle_fade_in" />
+        <!-- Action to navigate to Ingredient Explanation Fragment -->
+        <action
+            android:id="@+id/action_nav_result_to_nav_ingredient_explanation"
+            app:destination="@id/nav_ingredient_explanation" />
+    </fragment>
+
+    <!-- NEW: Chatbot Fragment -->
+    <fragment
+        android:id="@+id/nav_chatbot"
+        android:name="com.nutrivision.app.ui.ai.ChatbotFragment"
+        android:label="NutriVision AI Chat">
+        <!-- No arguments needed here, fetches data from SharedViewModel -->
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.nutrivision.app.ui.history.HistoryFragment"
+        android:label="History" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.nutrivision.app.ui.profile.ProfileFragment"
+        android:label="Profile" />
+
+    <!-- NEW: Ingredient Explanation Fragment -->
+    <fragment
+        android:id="@+id/nav_ingredient_explanation"
+        android:name="com.nutrivision.app.ui.ai.IngredientExplanationFragment"
+        android:label="Ingredient Explanation">
+        <!-- Argument for ingredient name ONLY -->
+        <argument android:name="ingredientName" app:argType="string" />
+        <!-- ScanResponse is NOT passed via nav args, fetched from SharedViewModel -->
+    </fragment>
+</navigation>

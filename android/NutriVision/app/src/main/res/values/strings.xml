@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NutriVision</string>
+
+    <!-- Authentication Screens -->
+    <string name="login_title">Welcome Back!</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_btn">Login</string>
+    <string name="register_prompt">Don\'t have an account? Register Now</string>
+    <string name="register_title">Create Your Account</string>
+    <string name="name_hint">Full Name</string>
+    <string name="register_btn">Register</string>
+    <string name="phone_login_title">Login with Phone Number</string>
+    <string name="phone_hint">Phone Number (e.g., +15551234567)</string>
+    <string name="send_otp_btn">Send OTP</string>
+    <string name="otp_verification_title">Verify OTP</string>
+    <string name="otp_hint">Enter OTP Code</string>
+    <string name="verify_otp_btn">Verify OTP</string>
+    <string name="resend_otp_btn">Resend OTP</string>
+    <string name="google_signin_btn">Sign in with Google</string>
+    <string name="or_separator">OR</string>
+    <string name="login_prompt">Already have an account? Login</string>
+
+    <!-- Home Screen -->
+    <string name="welcome_message">Good Morning!</string>
+    <string name="tagline_home">Track your nutrition for a healthier day.</string>
+    <string name="recent_activity_title">Recent Activity</string>
+    <string name="scan_image_card_title">Scan Ingredients</string>
+    <string name="scan_image_card_description">Click to scan using your camera.</string>
+    <string name="type_ingredients_card_title">Type Ingredients</string>
+    <string name="type_ingredients_card_description">Manually enter your ingredients.</string>
+
+    <!-- Manual Input Screen -->
+    <string name="manual_input_title">Manual Ingredient Input</string>
+    <string name="ingredients_hint">Type comma-separated ingredients here...</string>
+    <string name="analyze_btn">Analyze Ingredients</string>
+
+    <!-- Scan Screen -->
+    <string name="scan_title">Image Scan</string>
+    <string name="take_picture_button">Take Picture</string>
+    <string name="image_description_placeholder">Image of food to be analyzed</string>
+    <string name="permission_denied_message">Camera permission denied. Please enable it in settings.</string>
+
+
+    <!-- Result Screen -->
+    <string name="result_title">Analysis Result</string>
+    <string name="recommendation_title">Recommendations</string>
+    <string name="ingredients_label">Ingredients:</string>
+    <string name="nutritional_info_label">Nutritional Information:</string>
+    <string name="calorie_label">Calories:</string>
+    <string name="protein_label">Protein:</string>
+    <string name="fat_label">Fat:</string>
+    <string name="carbs_label">Carbs:</string>
+    <string name="go_home_btn">Go to Home</string>
+
+    <!-- History Screen -->
+    <string name="history_title">History</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_title">Profile</string>
+    <string name="logout_btn">Logout</string>
+    <string name="account_settings_title">Account Settings</string>
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="terms_of_service_title">Terms Of Service</string>
+    <string name="about_us_title">About Us</string>
+    <string name="contact_us_title">Contact Us</string>
+
+    <!-- General UI -->
+    <string name="loading_message">Loading...</string>
+    <string name="error_message">An error occurred. Please try again.</string>
+
+</resources>

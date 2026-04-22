@@ -1,0 +1,28 @@
+# Secrets
+backend/.env
+*.env
+
+# Python
+backend/venv/
+**/__pycache__/
+**/*.py[cod]
+.pytest_cache/
+
+# Android / Gradle
+**/build/
+.gradle/
+local.properties
+
+# Large local archives / SDK bundles (not source)
+android/NutriVision/*.zip
+android/NutriVision/cmdline-tools/
+android/NutriVision/gradle-8.4/
+android/NutriVision/gradle-*/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

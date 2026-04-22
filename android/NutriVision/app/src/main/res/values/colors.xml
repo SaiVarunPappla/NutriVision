@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- M3 Palette -->
+    <color name="md_theme_light_primary">#006C4D</color>
+    <color name="md_theme_light_primaryContainer">#B9F3DA</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_onPrimaryContainer">#002115</color>
+    <color name="md_theme_light_secondary">#4B6358</color>
+    <color name="md_theme_light_background">#F8FAF9</color>
+    <color name="md_theme_light_onBackground">#1A1C1B</color>
+    <color name="md_theme_light_surface">#FFFFFF</color>
+    <color name="md_theme_light_surfaceVariant">#EDF2EE</color>
+    <color name="md_theme_light_onSurface">#1A1C1B</color>
+    <color name="md_theme_light_secondaryContainer">#D7F3E6</color>
+    <color name="md_theme_light_onSecondaryContainer">#0C3B2C</color>
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_warning">#B26A00</color>
+    <color name="confidence_high">#167A45</color>
+    <color name="confidence_medium">#B26A00</color>
+    <color name="confidence_low">#B42318</color>
+
+    <!-- Compatibility Aliases (Required for existing layouts) -->
+    <color name="primary">#006C4D</color>
+    <color name="background">#F8FAF9</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#BA1A1A</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="md_theme_light_outline">#CCCCCC</color>
+</resources>
