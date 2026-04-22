@@ -35,7 +35,7 @@ These are engineering implementation metrics from the current codebase:
 - **4 nutrition data source integrations** in the backend: USDA, OpenFoodFacts, API-Ninjas, and optional Edamam path
 - **14 allergen categories** covered through rule-based detection mapping
 - **6 dietary suitability checks**: vegetarian, vegan, gluten-free, dairy-free, keto-friendly, and nut-free
-- **3 authentication methods** in Android flow: email/password, Google Sign-In path, and phone OTP
+- **3 authentication methods** in Android flow: email/password, Google Sign-In, and phone OTP
 - **7 core user-facing fragments**: Home, Scan, Text Input, Result, Chat, History, and Profile
 - Confidence-gated branded product matching with ingredient-level fallback when confidence is low
 
@@ -63,7 +63,7 @@ These are engineering implementation metrics from the current codebase:
 - User-profile-aware AI responses for diet preference and allergy sensitivity
 
 ### Mobile App Experience
-- Authentication with email/password, Google Sign-In path, and phone OTP
+- Authentication with email/password, Google Sign-In, and phone OTP
 - History module
 - Profile module
 - Result screen with confidence and trust cues
@@ -153,10 +153,13 @@ A backend image OCR route also exists, but the current Android flow primarily us
 The Android app currently includes:
 
 - Email and Password login
-- Google Sign-In flow path
+- Google Sign-In with Firebase Authentication
 - Phone OTP verification flow
 
-> Note: Google Sign-In may still require additional polishing depending on local Firebase setup.
+### Authentication Status
+- **Email/Password:** implemented
+- **Google Sign-In:** implemented and working properly
+- **Phone OTP:** implemented in the current Android authentication flow
 
 ---
 
@@ -355,9 +358,9 @@ TESSERACT_CMD=C:\Program Files\Tesseract-OCR\tesseract.exe
 ```
 
 Recommended:
-- keep real secrets only in local `.env`,
-- add `.env` to `.gitignore`,
-- optionally create a `.env.example` file with placeholders only.
+- keep real secrets only in local `.env`
+- add `.env` to `.gitignore`
+- optionally create a `.env.example` file with placeholders only
 
 ---
 
@@ -370,7 +373,6 @@ Recommended:
 - Retrofit base URL may still be hardcoded for local development in the current setup.
 - Cleartext traffic is enabled for local development workflows.
 - Some navigation references may still point to features under refinement.
-- Google Sign-In may require additional project-side setup or cleanup.
 
 ---
 
@@ -380,7 +382,6 @@ Recommended:
 - Build-variant or environment-based Retrofit base URL configuration
 - Complete Android multipart image upload flow for `/scan/image`
 - Stronger production authentication hardening
-- Improved Google Sign-In stability
 - Local offline caching of history and results
 - Better OCR confidence analytics and retake guidance
 - CI checks for endpoint contracts and route coverage
